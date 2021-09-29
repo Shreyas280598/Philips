@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "659813898926",
+    "project_id": "philips-4a517",
+    "storage_bucket": "philips-4a517.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:659813898926:android:bb1ef60761832fbd58ab3f",
+        "android_client_info": {
+          "package_name": "com.example.philips"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "659813898926-fi3g873otqh6nr11hghg7ahu5i1akd0b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBB1Ri64XOuGP9vn-xAGE0brvvco_g8qwA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "659813898926-fi3g873otqh6nr11hghg7ahu5i1akd0b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
