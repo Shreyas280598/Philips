@@ -17,7 +17,7 @@ class ContentProviderActivity : AppCompatActivity() {
 
         cpListView = findViewById(R.id.cpListView)
         val uriSms: Uri = Uri.parse("content://call_log/calls")
-        val cursor: Cursor? = getContentResolver().query(uriSms, null, null, null, null)
+        val cursor: Cursor? = getContentResolver().query(uriSms, null, null, null, "date DESC")
 
         var colNames = arrayOf(CallLog.Calls.NUMBER,CallLog.Calls.CACHED_NAME)
         var toArray = intArrayOf(android.R.id.text1,android.R.id.text2)
@@ -29,9 +29,6 @@ class ContentProviderActivity : AppCompatActivity() {
 
         cpListView.adapter = adapter
 
-        /**
-         *
-         */
 
     }
 }
