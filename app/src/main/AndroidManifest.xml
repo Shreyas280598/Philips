@@ -3,8 +3,8 @@
     package="com.example.philips">
 
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
-    <uses-permission android:name="android.permission.READ_SMS"/>
-    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
 
     <application
         android:allowBackup="true"
@@ -14,17 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Philips">
         <activity
-            android:name=".datastorge.ContentProviderActivity"
-            android:exported="true" >
-
-        </activity>
-        <activity
-            android:name=".datastorge.DataActivity"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:name=".HomeActivity"
+            android:name=".FragActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,17 +23,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".datastorge.ContentProviderActivity"
             android:exported="true"></activity>
+        <activity
+            android:name=".datastorge.DataActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true">
 
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
         <activity
             android:name=".whowroteit.WhoWroteActivity"
             android:exported="true"
-            android:label="who wrote this book" >
-
-
-
-        </activity>
+            android:label="who wrote this book"></activity>
     </application>
 
 </manifest>
