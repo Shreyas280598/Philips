@@ -1,5 +1,6 @@
 package com.example.philips
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -20,6 +21,20 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class HeadlinesFragment : Fragment(), AdapterView.OnItemClickListener {
+
+    interface HeadlinesClickListenerSB {
+        fun onHeadlineClickSw(data:String)
+    }
+
+    lateinit var headlinesClickListenerSB: HeadlinesClickListenerSB //declaration
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+
+        headlinesClickListenerSB = activity as HeadlinesClickListenerSB //type casting -- wiring
+    }
+
+
     lateinit var lvNations: ListView
 
     override fun onCreateView(
@@ -52,6 +67,7 @@ class HeadlinesFragment : Fragment(), AdapterView.OnItemClickListener {
     }
      override fun onItemClick(arrayAdapter: AdapterView<*>?, p1: View?, position: Int, p3: Long) {
         var itemClicked = arrayAdapter?.getItemAtPosition(position).toString()
+         headlinesClickListenerSB.onHeadlineClickSw(itemClicked)
         Toast.makeText(context,itemClicked,Toast.LENGTH_SHORT).show()
     }
 }
